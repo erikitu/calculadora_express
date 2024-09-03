@@ -1,3 +1,14 @@
+# Calculadora Express
+
+Esta é uma aplicação simples de calculadora desenvolvida com o framework Express para Node.js. Ela permite realizar operações matemáticas básicas (soma, subtração, multiplicação e divisão) através de requisições HTTP GET.
+
+## Estrutura do Projeto
+
+O projeto é composto por um único arquivo JavaScript que configura um servidor Express e define uma rota para a calculadora.
+
+### Código
+
+```javascript
 const express = require('express');
 const app = express();
 const port = 3000;
