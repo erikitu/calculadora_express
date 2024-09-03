@@ -54,3 +54,52 @@ app.get('/calculadora', (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
+```
+
+## Como Utilizar
+
+### Instalação das Dependências
+
+Certifique-se de ter o Node.js e o npm (ou yarn) instalados. Em seguida, instale a dependência Express:
+
+```
+npm install express
+```
+
+
+## Executando o Servidor
+
+### Para iniciar o servidor, execute o seguinte comando:
+
+```bash
+node app.js
+```
+
+## Realizando Requisições
+A API está disponível no endpoint /calculadora. Você pode realizar requisições HTTP GET para este endpoint com os seguintes parâmetros:
+
+- operacao: A operação a ser realizada (soma, subtracao, multiplicacao, divisao).
+- n1: O primeiro número para a operação.
+- n2: O segundo número para a operação.
+
+###Exemplo de requisição GET:
+
+```bash
+http://localhost:3000/calculadora?operacao=soma&n1=5&n2=10
+```
+
+## Resposta esperada:
+
+```json
+    {
+        "resultado": 15
+    }
+```
+
+## Tratamento de Erros
+- Parâmetros Inválidos: Se n1 ou n2 não forem números, a resposta será um erro 400 com a mensagem "Parâmetros n1 e n2 devem ser números."
+- Divisão por Zero: Se tentar dividir por zero, a resposta será um erro 400 com a mensagem "Divisão por zero não é permitida."
+- Operação Inválida: Se a operação fornecida não estiver entre as opções válidas, a resposta será um erro 400 com a mensagem "Operação Inválida."
+
+## Contribuindo
+Se desejar contribuir para este projeto, fique à vontade para enviar pull requests ou abrir issues com sugestões e melhorias.
