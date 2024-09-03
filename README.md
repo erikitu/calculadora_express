@@ -82,7 +82,7 @@ A API está disponível no endpoint /calculadora. Você pode realizar requisiç�
 - n1: O primeiro número para a operação.
 - n2: O segundo número para a operação.
 
-###Exemplo de requisição GET:
+### Exemplo de requisição GET:
 
 ```bash
 http://localhost:3000/calculadora?operacao=soma&n1=5&n2=10
